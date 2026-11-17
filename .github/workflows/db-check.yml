@@ -8,4 +8,4 @@ jobs:
       - name: Préparer la base
         run: bash db/setup.sh
       - name: Afficher les étudiants
-        run: PASSWORD=postgres psql -h localhost -U postgres -d yp -c "SELECT * FROM students;"
+        run: PGPASSWORD=postgres psql -h localhost -U postgres -d tp -c "SELECT * FROM students;"
