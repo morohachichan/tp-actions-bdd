@@ -16,13 +16,3 @@ sudo -u postgres createdb tp
 echo ">> Création de la table students"
 PGPASSWORD=postgres psql -h localhost -U postgres -d tp \
 -v ON_ERROR_STOP=1 -f "$(dirname "$0")/init.sql"
-
-
-CREATE TABLE students (
-id
-SERIAL PRIMARY KEY,
-name VARCHAR(100) NOT NULL,
-grade NUMERIC(4,2) NOT NULL
-);
-INSERT INTO students (name, grade) VALUES ('Amel', 15);
-INSERT INTO students (name, grade) VALUES ('Karim', 12);
